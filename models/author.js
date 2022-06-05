@@ -7,4 +7,5 @@ const authorSchema = new mongoose.Schema({
     }
 })
 
+// book ref from author here
 module.exports = mongoose.model('Author', authorSchema)
