@@ -26,7 +26,10 @@
         value="<%= book.pageCount==null ? "1":book.pageCount.toISOString  %>">
 </div>
 <div>
-    <label>Page Count</label>
-    <input type="number" name="pageCount" min="1"
-        value="<%= book.pageCount==null ? "1":book.pageCount.toISOString  %>">
+    <label>Cover</label>
+    <input type="file" name="cover">
+</div>
+<div>
+    <label>Description</label>
+    <textarea name="cover"><%= book.description%></textarea>
 </div>
