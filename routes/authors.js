@@ -1,4 +1,6 @@
 const express = require('express')
+const { route } = require('express/lib/application')
+const author = require('../models/author')
 const router = express.Router()
 const Author = require('../models/author')
 
@@ -50,4 +52,31 @@ router.post('/', async (req, res) => {
     //res.send(req.body.name)
 }
 )
+
+
+
+
+//edit secton 
+router.get('/:id', (req,res)=>{
+    res.send('Show Author ' + req.params.id)
+})
+
+router.get('/:id/edit', async(req,res)=>{
+    const author = await Author.findById(req.params.id)
+    try{
+        res.render('authors/edit', { author:  author })
+    }
+    catch{
+        res.render('/authors')
+    }
+   
+})
+
+router.put('/:id', (req,res)=>{
+    res.send('Update Author ' + req.params.id)
+})
+
+router.delete('/:id', (req,res)=>{
+    res.send('Delete Author ' + req.params.id)
+})
 module.exports=router
