@@ -1,0 +1,59 @@
+@import 'shared/fonts.css';
+@import 'shared/variables.css';
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+
+:root{
+    font-family:'Gotham Rounded';
+    font-size: 20px;
+    color: var(--color-text-1)
+}
+body{
+    background: linear-gradient(to right,var(--color-background-dark), var(--color-background-light));
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.innercontainer{
+    margin: 0 2rem;
+}
+.inline{
+    display :flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.elementpadd{
+    padding-right: 1.5rem;
+    text-decoration: none;
+    color: var(--color-text-1);
+}
+.elementpadd:hover{
+    color: var(--color-text-2);
+}
+.main-text{
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--color-text-1);
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+.main-text:hover{
+    text-decoration: underline;
+}
+.main-text:visited{
+    color: var(--color-text-1);
+}
+.topbar{
+    list-style: none;
+
+}
